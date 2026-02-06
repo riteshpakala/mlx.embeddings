@@ -4,16 +4,19 @@ import PackageDescription
 
 let package = Package(
   name: "mlx_embeddings",
-  platforms: [.macOS(.v14), .iOS(.v16)],
+  platforms: [.macOS(.v14), .iOS(.v17)],
   products: [
     .library(
       name: "mlx_embeddings",
       targets: ["mlx_embeddings"])
   ],
   dependencies: [
-    .package(url: "https://github.com/ml-explore/mlx-swift", .upToNextMinor(from: "0.25.4")),
+    .package(url: "https://github.com/ml-explore/mlx-swift", .upToNextMinor(from: "0.30.3")),
     .package(
-        url: "https://github.com/huggingface/swift-transformers", .upToNextMinor(from: "0.1.21")
+        url: "https://github.com/huggingface/swift-transformers", .upToNextMinor(from: "1.1.0")
+    ),
+    .package(
+        url: "https://github.com/ml-explore/mlx-swift-lm", .upToNextMinor(from: "2.30.3")
     ),
     .package(url: "https://github.com/ml-explore/mlx-swift-examples/", branch: "main"),
 
@@ -28,7 +31,7 @@ let package = Package(
         .product(name: "MLXOptimizers", package: "mlx-swift"),
         .product(name: "MLXRandom", package: "mlx-swift"),
         .product(name: "MLXLinalg", package: "mlx-swift"),
-        .product(name: "MLXLMCommon", package: "mlx-swift-examples"),
+        .product(name: "MLXLMCommon", package: "mlx-swift-lm"),
         .product(name: "Transformers", package: "swift-transformers"),
       ]),
     .testTarget(
