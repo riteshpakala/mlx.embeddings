@@ -16,7 +16,7 @@ let package = Package(
         url: "https://github.com/riteshpakala/swift-transformers", branch: "main"
     ),
     .package(
-        url: "https://github.com/ml-explore/mlx-swift-lm", .upToNextMinor(from: "2.30.3")
+        url: "https://github.com/riteshpakala/mlx-swift-lm", branch: "main"
     )
 
   ],
