@@ -11,7 +11,7 @@ let package = Package(
       targets: ["mlx_embeddings"])
   ],
   dependencies: [
-    .package(url: "https://github.com/ml-explore/mlx-swift", .upToNextMinor(from: "0.30.3")),
+    .package(url: "https://github.com/riteshpakala/mlx-swift", branch: "main"),
     .package(
         url: "https://github.com/riteshpakala/swift-transformers", branch: "main"
     ),
