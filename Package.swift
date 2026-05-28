@@ -11,7 +11,7 @@ let package = Package(
       targets: ["mlx_embeddings"])
   ],
   dependencies: [
-    .package(url: "https://github.com/riteshpakala/mlx-swift", branch: "main"),
+    .package(url: "https://github.com/riteshpakala/mlx-swift.git", branch: "gab/cuda1"),
     .package(
         url: "https://github.com/riteshpakala/swift-transformers", branch: "main"
     ),
